@@ -13,6 +13,8 @@ I have made a few changes, removing the constraint to keep small enough to train
  
 The most crucial idea for the network is that of Connectionist Temporal Classification (CTC) loss, which allows an alignment free method to map an input sequence to an output. To get an idea of the CTC loss see [here](https://towardsdatascience.com/intuitively-understanding-connectionist-temporal-classification-3797e43a86c), and [here](https://distill.pub/2017/ctc/).
 
+Scroll to the bottom if you want to skip this and see the model in action!
+
 ## Dataset format and dataloaders
 
 To load the data and batch it up for training, I have used the pytorch Dataset and Dataloader classes to create custom versions for this task. The original dataset used to train the model is the IAM handwriting offline data, but with the weights and decode maps provided you can start to train on your own dataset. 
@@ -165,13 +167,6 @@ log, lr = learn.find_lr(start_lr=1e-5, end_lr=1e1, wd=0.1)                      
                                                                                        # wd = weight decay
 # based on https://sgugger.github.io/how-do-you-find-a-good-learning-rate.html
 ```
-
-    /opt/anaconda3/lib/python3.7/site-packages/skimage/transform/_warps.py:110: UserWarning: Anti-aliasing will be enabled by default in skimage 0.15 to avoid aliasing artifacts when down-sampling images.
-      warn("Anti-aliasing will be enabled by default in skimage 0.15 to "
-
-
-    batch 79
-
 
 ![png](images/output_8_2.png)
 
