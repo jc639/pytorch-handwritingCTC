@@ -198,7 +198,7 @@ During training current train loss and batch number are printed. After each epoc
 - The sum of the Levenshtein edit distances divide by sum of the target lengths, for both the training and validation set
 
 ## Loading in saved model weights
-TODO: HOST THE MODEL WEIGHTS SOMEWHERE, CURRENTLY OVER THE GITHUB FILE SIZE.
+Model weights are available [here](https://drive.google.com/drive/folders/1hwPI13LCVF52WQboSfr_4jYsGIGV1tle?usp=sharing).
 
 There are two saved model in the `weights` folder of this repository. `weights/line` has a the weights and decode map for a line level handwriting recognition and `weights/words`
 
@@ -509,8 +509,6 @@ pred = learn.predict(img_path='lines/deslanted/b04/b04-020/b04-020-06.png', tran
 
 
 # Further work
-TODO: HOST THE MODEL WEIGHTS SOMEWHERE, CURRENTLY OVER THE GITHUB FILE SIZE.
-
 It is unlikely that the model will work out the box for other applications, as the IAM dataset has some oddities, and may not reflect data that you have collected. 
 
 But as the model comes pretrained it may make a start, and with a little further training it will likely improve, whilst needing considerably less examples than training from scratch.
