@@ -200,7 +200,7 @@ During training current train loss and batch number are printed. After each epoc
 ## Loading in saved model weights
 Model weights are available [here](https://drive.google.com/drive/folders/1hwPI13LCVF52WQboSfr_4jYsGIGV1tle?usp=sharing).
 
-There are two saved model in the `weights` folder of this repository. `weights/line` has a the weights and decode map for a line level handwriting recognition and `weights/words`
+There are two saved model in the `weights` folder of this zip. `weights/line` has a the weights and decode map for a line level handwriting recognition and `weights/words` has the same for the word model.
 
 The line level has an 7.1% edit rate between predicted and targets, and overall item level accuracy of 36% (complete lines with no errors) using a best path decoding of the CTC matrix. The line level model expects image input with as size of 64x800 (width x height), and it can output 79 characters (A-Z,a-z,0-9, plus punctuation including space).
 
