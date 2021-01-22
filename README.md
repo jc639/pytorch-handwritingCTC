@@ -91,6 +91,43 @@ df.head()
 
 The CSV should have the format of the filename (with extension - e.g .png) in the first column (the column name doesn't matter), the first element of the filename should be the same as the folder `a01-000u-00-00.png` is in `root_dir\a01\`. The 'word' transcription column can be at any position, and with any column name, as position can be specified with the `word_col` attribute of the CTCData class. The 'ok' column represents the result of word segmentation for the IAM dataset, and is irrelevant for training.
 
+### Format for IAM Lines
+If you want to train with the IAM Lines data, the format above is necessary but the only change you need to make is to make sure the CSV points to and labels the line data, rather than the words.
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>file</th>
+      <th>ok</th>
+      <th>word</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a01-000u-00-00.png</td>
+      <td>ok</td>
+      <td>This is a sentence</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>a01-000u-00-01.png</td>
+      <td>ok</td>
+      <td>Here is another one.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>a01-000u-00-02.png</td>
+      <td>ok</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+### Setting up the dataset and dataloader with the CSV
 To get the data ready for training the csv needs to passed to the CTCDataset class:
 
 
