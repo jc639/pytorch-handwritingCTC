@@ -234,6 +234,9 @@ During training current train loss and batch number are printed. After each epoc
 - Item Error Rate (IER)
 - The sum of the Levenshtein edit distances divide by sum of the target lengths, for both the training and validation set
 
+### (13/09/21) NOTE is this the best way to evaluate this model?
+I did this several years ago and I think I would evaluate slightly differently now. Pick one metric would be my advice - it becomes confusing if you look at multiple, the levenshtein edit makes most sense to me. Also I believe the IAM dataset marks the person who the handwriting belongs to out of the 657 writers in the dataset - to test generalisation of the model to unseen handwriting it would make sense to have a person(s) whose handwriting is only in the validation set.
+
 ## Loading in saved model weights
 Model weights are available [here](https://drive.google.com/drive/folders/1hwPI13LCVF52WQboSfr_4jYsGIGV1tle?usp=sharing).
 
